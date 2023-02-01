@@ -1,0 +1,22 @@
+<mat-card class="mat-card">
+    <mat-card-header class="mat-card-header">
+      <mat-card-title>Identifique-se!</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mat-card-content">
+        <form class="login-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Usuário</mat-label>
+                <input name="login" [ngModel]="loginInput" (ngModelChange)="loginInput=$event" matInput placeholder="Ex. Login">
+            </mat-form-field>
+        
+            <mat-form-field class="example-full-width">
+                <mat-label>Senha</mat-label>
+                <input name="password" [ngModel]="passwordInput" (ngModelChange)="passwordInput=$event" type="password" matInput placeholder="Ex. ********">
+            </mat-form-field>
+        </form>
+    <p [style.display]="loginError ? 'block' : 'none'" >Login incorreto!</p>
+    </mat-card-content>
+    <mat-card-actions class="mat-card-actions">
+      <button mat-raised-button (click)="login()" color="primary">Entrar</button>
+    </mat-card-actions>
+  </mat-card>

@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Adicionar/Editar Usuário</h1>
+<div mat-dialog-content>
+  <p>Infrome os dados abaixo</p>
+  <mat-form-field style="width:100%">
+    <mat-label>Login</mat-label>
+    <input matInput matInput [(ngModel)]="data.login">
+  </mat-form-field>
+  <mat-form-field style="width:100%">
+    <mat-label>Senha</mat-label>
+    <input matInput matInput [(ngModel)]="data.password">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Salvar</button>
+</div>
